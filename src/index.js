@@ -22,8 +22,8 @@ var map = new Map({
 });
 
 const canvas = document.createElement('canvas');
-canvas.style.width = '300';
-canvas.style.height = '300';
+canvas.style.width = '150';
+canvas.style.height = '150';
 canvas.style.position = 'absolute';
 const ctx = canvas.getContext('2d');
 
@@ -126,7 +126,8 @@ function clock() {
 window.requestAnimationFrame(clock);
 
 var canvasOverlay = new Overlay({
-  element: canvas
+  element: canvas,
+  stopEvent: false,
 });
 canvasOverlay.setPosition([0, 0]);
 map.addOverlay(canvasOverlay);
